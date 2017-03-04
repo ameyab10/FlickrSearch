@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="viewModel" type="com.amb.wallpaper.viewmodel.InterestingPhotosFragmentViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.amb.wallpaper.fragment.InterestingPhotosFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:context="com.amb.wallpaper.fragment.InterestingPhotosFragment">
+
+        <EditText
+            android:id="@+id/image_search_edittext"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:hint="@string/cats"
+            android:text="@={viewModel.queryObservable}"
+            android:maxLines="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:onClick="@{() -> viewModel.searchImages()}"
+            android:layout_width="wrap_content"
+            android:text="Search"
+            android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+</layout>
