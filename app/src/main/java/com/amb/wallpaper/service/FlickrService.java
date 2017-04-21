@@ -23,4 +23,13 @@ public interface FlickrService {
 
     @GET("services/rest?method=flickr.photos.search")
     Observable<PhotoContainer> searchPhotos(@Query("text") String query);
+
+//Sample Path request
+//    @GET("group/{id}/users")
+//Call<List<User>> groupList(@Path("id") int groupId, @Query("sort") String sort);
+
+
+//Sample post request
+//    @POST("users/new")
+//    Call<User> createUser(@Body User user);
 }
