@@ -46,11 +46,10 @@ public class PhotosAdapter extends RecyclerView.Adapter<PhotosAdapter.PhotoViewH
         if (mPhotoList != null && position < mPhotoList.size()) {
             ImageView imageView = holder.mPhotoViewBinding.photoImageview;
             String url = getPhotoUrl(mPhotoList.get(position));
-            Glide
+                Glide
                     .with(imageView.getContext())
                     .load(url)
                     .centerCrop()
-//                    .placeholder(android.R.color.darker_gray)
                     .crossFade()
                     .into(imageView);
         }

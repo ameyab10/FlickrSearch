@@ -38,3 +38,23 @@ captures/
 
 # Keystore files
 *.jks
+
+
+.gradle
+/local.properties
+.idea/
+.idea/
+.DS_Store
+/build
+/captures
+*.iml
+yala.xml
+*.repo
+framework/
+external/
+app/gradlew
+app/gradlew.bat
+app/local.properties
+app/gradle/wrapper/gradle-wrapper.jar
+app/gradle/wrapper/gradle-wrapper.properties
+lint-report/
